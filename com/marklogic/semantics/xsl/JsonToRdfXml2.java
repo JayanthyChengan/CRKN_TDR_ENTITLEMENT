@@ -1,0 +1,86 @@
+package com.marklogic.semantics.xsl;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Property;
+
+import java.io.StringWriter;
+import java.util.Iterator;
+ 
+
+public class JsonToRdfXml2 {
+
+    public static void main(String[] args) {
+        String json2 = "{ \"id\":\"https://ror.org/03dbr7087\", \"name\":\"University of Toronto\", \"email_address\":\"\", \"ip_addresses\":[], \"established\":1827, \"types\":[\"Education\"], \"relationships\":[{\"label\":\"Baycrest Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/03gp5b411\"}, {\"label\":\"Campbellford Memorial Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/022ave037\"}], \"addresses\":[{\"geonames_city\":{\"id\":6167865, \"city\":\"Toronto\"}}], \"country\":{\"country_name\":\"Canada\", \"country_code\":\"CA\"}}";
+        String json = "{ \"id\":\"https://ror.org/03dbr7087\", \"name\":\"University of Toronto\", \"email_address\":\"\", \"ip_addresses\":[], \"established\":1827, \"types\":[\"Education\"], \"relationships\":[{\"label\":\"Baycrest Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/03gp5b411\"}, {\"label\":\"Campbellford Memorial Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/022ave037\"}, {\"label\":\"Centre for Addiction and Mental Health\", \"type\":\"Related\", \"id\":\"https://ror.org/03e71c577\"}, {\"label\":\"Creative Destruction Lab\", \"type\":\"Related\", \"id\":\"https://ror.org/02p6a3b37\"}, {\"label\":\"Holland Bloorview Kids Rehabilitation Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/03qea8398\"}, {\"label\":\"Hospital for Sick Children\", \"type\":\"Related\", \"id\":\"https://ror.org/057q4rt57\"}, {\"label\":\"Humber River Regional Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/02gj19t78\"}, {\"label\":\"Institute for Circumpolar Health Research\", \"type\":\"Related\", \"id\":\"https://ror.org/0390kp681\"}, {\"label\":\"Lunenfeld-Tanenbaum Research Institute\", \"type\":\"Related\", \"id\":\"https://ror.org/01s5axj25\"}, {\"label\":\"Mount Sinai Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/05deks119\"}, {\"label\":\"North York General Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/05b3hqn14\"}, {\"label\":\"St. Michael's Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/04skqfp25\"}, {\"label\":\"Sunnybrook Health Science Centre\", \"type\":\"Related\", \"id\":\"https://ror.org/03wefcv03\"}, {\"label\":\"Sunnybrook Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/008kn1a71\"}, {\"label\":\"Surrey Place Centre\", \"type\":\"Related\", \"id\":\"https://ror.org/01tw7ew41\"}, {\"label\":\"The Scarborough Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/04pzgb662\"}, {\"label\":\"Toronto East General Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/03sm16s30\"}, {\"label\":\"Trillium Health Centre\", \"type\":\"Related\", \"id\":\"https://ror.org/03v6a2j28\"}, {\"label\":\"University Health Network\", \"type\":\"Related\", \"id\":\"https://ror.org/042xt5161\"}, {\"label\":\"Waypoint Centre for Mental Health Care\", \"type\":\"Related\", \"id\":\"https://ror.org/0548x8e24\"}, {\"label\":\"West Park Healthcare Centre\", \"type\":\"Related\", \"id\":\"https://ror.org/037y13578\"}, {\"label\":\"Women's College Hospital\", \"type\":\"Related\", \"id\":\"https://ror.org/03cw63y62\"}, {\"label\":\"Canadian Institute for Theoretical Astrophysics\", \"type\":\"Child\", \"id\":\"https://ror.org/0265wc016\"}, {\"label\":\"Fields Institute for Research in Mathematical Sciences\", \"type\":\"Child\", \"id\":\"https://ror.org/03zzj3f20\"}, {\"label\":\"Ted Rogers Centre for Heart Research\", \"type\":\"Child\", \"id\":\"https://ror.org/00cgnj660\"}, {\"label\":\"Beaufort Lagoon Ecosystems Long Term Ecological Research Network\", \"type\":\"Related\", \"id\":\"https://ror.org/055a54548\"}], \"addresses\":[{\"lat\":43.70011, \"lng\":-79.4163, \"state\":null, \"state_code\":null, \"city\":\"Toronto\", \"geonames_city\":{\"id\":6167865, \"city\":\"Toronto\", \"geonames_admin1\":{\"name\":\"Ontario\", \"id\":6093943, \"ascii_name\":\"Ontario\", \"code\":\"CA.08\"}, \"geonames_admin2\":{\"name\":null, \"id\":null, \"ascii_name\":null, \"code\":null}, \"license\":{\"attribution\":\"Data from geonames.org under a CC-BY 3.0 license\", \"license\":\"http://creativecommons.org/licenses/by/3.0/\"}, \"nuts_level1\":{\"name\":null, \"code\":null}, \"nuts_level2\":{\"name\":null, \"code\":null}, \"nuts_level3\":{\"name\":null, \"code\":null}}, \"postcode\":null, \"primary\":false, \"line\":null, \"country_geonames_id\":6251999}], \"links\":[\"http://www.utoronto.ca/\"], \"aliases\":[], \"acronyms\":[], \"status\":\"active\", \"wikipedia_url\":\"https://en.wikipedia.org/wiki/University_of_Toronto\", \"labels\":[{\"label\":\"Université de Toronto\", \"iso639\":\"fr\"}], \"country\":{\"country_name\":\"Canada\", \"country_code\":\"CA\"}, \"external_ids\":{\"ISNI\":{\"preferred\":null, \"all\":[\"0000 0001 2157 2938\"]}, \"FundRef\":{\"preferred\":\"501100003579\", \"all\":[\"501100003579\", \"501100000154\", \"501100000086\", \"501100000064\", \"100008386\", \"501100007921\", \"501100008097\", \"501100007224\", \"100009036\", \"501100000181\", \"501100002323\", \"501100002827\", \"501100003474\", \"501100004730\", \"501100006151\"]}, \"OrgRef\":{\"preferred\":\"7955325\", \"all\":[\"7955325\", \"358828\", \"221783\", \"32774\", \"333619\", \"5303285\", \"251833\", \"599409\", \"1724690\"]}, \"Wikidata\":{\"preferred\":\"Q180865\", \"all\":[\"Q180865\", \"Q6120110\", \"Q3551675\"]}, \"GRID\":{\"preferred\":\"grid.17063.33\", \"all\":\"grid.17063.33\"}}}";
+
+        try {
+            // Parse JSON string
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode rootNode = mapper.readTree(json);
+
+            // Create an empty RDF model
+            Model model = ModelFactory.createDefaultModel();
+
+            // Define namespace for j.0
+            String ns = "http://example.org/j.0/";
+            model.setNsPrefix("j.0", ns);
+
+            // Extract triples and add them to the RDF model (using the root subject)
+            String rootSubjectUri = rootNode.get("id").asText();
+            Resource rootSubject = model.createResource(rootSubjectUri);
+            extractTriples(rootNode, rootSubject, model, ns);
+
+            // Output the RDF model in RDF/XML format
+            StringWriter writer = new StringWriter();
+            model.write(writer, "RDF/XML");
+            System.out.println(writer.toString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Function to extract triples from a JSON object
+    public static void extractTriples(JsonNode node, Resource subject, Model model, String ns) {
+        Iterator<String> fieldNames = node.fieldNames();
+
+        while (fieldNames.hasNext()) {
+            String predicate = fieldNames.next();
+            JsonNode valueNode = node.get(predicate);
+
+            if (valueNode.isObject()) {
+                // For any nested object, create a URI and relate it to the root subject
+                String nestedObjectUri = subject.getURI() + "/" + predicate;
+                Resource nestedResource = model.createResource(nestedObjectUri);
+                extractTriples(valueNode, nestedResource, model, ns); // Recursively extract nested triples
+
+                // Add a property linking the root subject to the nested object
+                Property prop = model.createProperty(ns + "has_" + predicate);
+                subject.addProperty(prop, nestedResource);
+            } else if (valueNode.isArray()) {
+                // Handle arrays by iterating over elements
+                for (JsonNode arrayElement : valueNode) {
+                    if (arrayElement.isObject()) {
+                        // For objects inside arrays, create URIs and recursively extract triples
+                        Resource arrayResource = model.createResource(subject.getURI() + "/" + predicate + "_item");
+                        extractTriples(arrayElement, arrayResource, model, ns);
+                        Property prop = model.createProperty(ns + "has_" + predicate);
+                        subject.addProperty(prop, arrayResource);
+                    } else {
+                        // Add simple values directly as properties
+                        Property prop = model.createProperty(ns + predicate);
+                        subject.addProperty(prop, arrayElement.asText());
+                    }
+                }
+            } else if (!valueNode.asText().isEmpty()) {
+                // Add simple property-value pairs to the root subject
+                Property prop = model.createProperty(ns + predicate);
+                subject.addProperty(prop, valueNode.asText());
+            }
+        }
+    }
+}

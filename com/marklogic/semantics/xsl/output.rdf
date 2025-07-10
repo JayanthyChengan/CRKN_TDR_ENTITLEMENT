@@ -1,0 +1,200 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sp="http://scholarsportal.info/ontologies/core/">
+  <rdf:Description rdf:about="https://ror.org/03dbr7087">
+    <sp:name>University of Toronto</sp:name>
+    <sp:has_country>
+      <rdf:Description rdf:about="https://ror.org/03dbr7087/country">
+        <sp:country_code>CA</sp:country_code>
+        <sp:country_name>Canada</sp:country_name>
+      </rdf:Description>
+    </sp:has_country>
+    <sp:types>Education</sp:types>
+    <sp:links>http://www.utoronto.ca/</sp:links>
+    <sp:wikipedia_url>https://en.wikipedia.org/wiki/University_of_Toronto</sp:wikipedia_url>
+    <sp:has_relationships>
+      <rdf:Description rdf:about="https://ror.org/03dbr7087/relationships_item">
+        <sp:type>Child</sp:type>
+        <sp:label>Waypoint Centre for Mental Health Care</sp:label>
+        <sp:id>https://ror.org/03zzj3f20</sp:id>
+        <sp:label>Surrey Place Centre</sp:label>
+        <sp:label>Women's College Hospital</sp:label>
+        <sp:label>Mount Sinai Hospital</sp:label>
+        <sp:label>Trillium Health Centre</sp:label>
+        <sp:id>https://ror.org/03e71c577</sp:id>
+        <sp:id>https://ror.org/01tw7ew41</sp:id>
+        <sp:label>Holland Bloorview Kids Rehabilitation Hospital</sp:label>
+        <sp:label>Sunnybrook Hospital</sp:label>
+        <sp:label>Baycrest Hospital</sp:label>
+        <sp:id>https://ror.org/04pzgb662</sp:id>
+        <sp:id>https://ror.org/03cw63y62</sp:id>
+        <sp:id>https://ror.org/00cgnj660</sp:id>
+        <sp:label>Campbellford Memorial Hospital</sp:label>
+        <sp:id>https://ror.org/04skqfp25</sp:id>
+        <sp:id>https://ror.org/055a54548</sp:id>
+        <sp:label>Centre for Addiction and Mental Health</sp:label>
+        <sp:id>https://ror.org/05deks119</sp:id>
+        <sp:id>https://ror.org/05b3hqn14</sp:id>
+        <sp:id>https://ror.org/0390kp681</sp:id>
+        <sp:label>Lunenfeld-Tanenbaum Research Institute</sp:label>
+        <sp:id>https://ror.org/03wefcv03</sp:id>
+        <sp:id>https://ror.org/0265wc016</sp:id>
+        <sp:label>Institute for Circumpolar Health Research</sp:label>
+        <sp:label>Beaufort Lagoon Ecosystems Long Term Ecological Research Network</sp:label>
+        <sp:id>https://ror.org/03v6a2j28</sp:id>
+        <sp:label>Sunnybrook Health Science Centre</sp:label>
+        <sp:id>https://ror.org/03sm16s30</sp:id>
+        <sp:id>https://ror.org/037y13578</sp:id>
+        <sp:label>Humber River Regional Hospital</sp:label>
+        <sp:id>https://ror.org/02p6a3b37</sp:id>
+        <sp:label>Ted Rogers Centre for Heart Research</sp:label>
+        <sp:label>Creative Destruction Lab</sp:label>
+        <sp:label>Fields Institute for Research in Mathematical Sciences</sp:label>
+        <sp:label>Toronto East General Hospital</sp:label>
+        <sp:id>https://ror.org/02gj19t78</sp:id>
+        <sp:id>https://ror.org/0548x8e24</sp:id>
+        <sp:type>Related</sp:type>
+        <sp:label>Hospital for Sick Children</sp:label>
+        <sp:id>https://ror.org/03gp5b411</sp:id>
+        <sp:label>The Scarborough Hospital</sp:label>
+        <sp:id>https://ror.org/008kn1a71</sp:id>
+        <sp:id>https://ror.org/022ave037</sp:id>
+        <sp:label>Canadian Institute for Theoretical Astrophysics</sp:label>
+        <sp:label>West Park Healthcare Centre</sp:label>
+        <sp:label>University Health Network</sp:label>
+        <sp:id>https://ror.org/042xt5161</sp:id>
+        <sp:label>North York General Hospital</sp:label>
+        <sp:id>https://ror.org/03qea8398</sp:id>
+        <sp:id>https://ror.org/057q4rt57</sp:id>
+        <sp:id>https://ror.org/01s5axj25</sp:id>
+        <sp:label>St. Michael's Hospital</sp:label>
+      </rdf:Description>
+    </sp:has_relationships>
+    <sp:has_external_ids>
+      <rdf:Description rdf:about="https://ror.org/03dbr7087/external_ids">
+        <sp:has_GRID>
+          <rdf:Description rdf:about="https://ror.org/03dbr7087/external_ids/GRID">
+            <sp:all>grid.17063.33</sp:all>
+            <sp:preferred>grid.17063.33</sp:preferred>
+          </rdf:Description>
+        </sp:has_GRID>
+        <sp:has_Wikidata>
+          <rdf:Description rdf:about="https://ror.org/03dbr7087/external_ids/Wikidata">
+            <sp:all>Q3551675</sp:all>
+            <sp:all>Q6120110</sp:all>
+            <sp:all>Q180865</sp:all>
+            <sp:preferred>Q180865</sp:preferred>
+          </rdf:Description>
+        </sp:has_Wikidata>
+        <sp:has_OrgRef>
+          <rdf:Description rdf:about="https://ror.org/03dbr7087/external_ids/OrgRef">
+            <sp:all>599409</sp:all>
+            <sp:all>221783</sp:all>
+            <sp:all>358828</sp:all>
+            <sp:all>333619</sp:all>
+            <sp:all>32774</sp:all>
+            <sp:all>7955325</sp:all>
+            <sp:all>251833</sp:all>
+            <sp:all>1724690</sp:all>
+            <sp:preferred>7955325</sp:preferred>
+            <sp:all>5303285</sp:all>
+          </rdf:Description>
+        </sp:has_OrgRef>
+        <sp:has_FundRef>
+          <rdf:Description rdf:about="https://ror.org/03dbr7087/external_ids/FundRef">
+            <sp:all>501100007921</sp:all>
+            <sp:all>501100003579</sp:all>
+            <sp:all>501100000064</sp:all>
+            <sp:all>501100002827</sp:all>
+            <sp:all>501100000154</sp:all>
+            <sp:all>501100004730</sp:all>
+            <sp:all>501100008097</sp:all>
+            <sp:all>501100006151</sp:all>
+            <sp:preferred>501100003579</sp:preferred>
+            <sp:all>501100000086</sp:all>
+            <sp:all>501100007224</sp:all>
+            <sp:all>501100000181</sp:all>
+            <sp:all>100009036</sp:all>
+            <sp:all>501100003474</sp:all>
+            <sp:all>100008386</sp:all>
+            <sp:all>501100002323</sp:all>
+          </rdf:Description>
+        </sp:has_FundRef>
+        <sp:has_ISNI>
+          <rdf:Description rdf:about="https://ror.org/03dbr7087/external_ids/ISNI">
+            <sp:all>0000 0001 2157 2938</sp:all>
+            <sp:preferred>null</sp:preferred>
+          </rdf:Description>
+        </sp:has_ISNI>
+      </rdf:Description>
+    </sp:has_external_ids>
+    <sp:has_addresses>
+      <rdf:Description rdf:about="https://ror.org/03dbr7087/addresses_item">
+        <sp:city>Toronto</sp:city>
+        <sp:country_geonames_id>6251999</sp:country_geonames_id>
+        <sp:postcode>null</sp:postcode>
+        <sp:lng>-79.4163</sp:lng>
+        <sp:state_code>null</sp:state_code>
+        <sp:has_geonames_city>
+          <rdf:Description rdf:about="https://ror.org/03dbr7087/addresses_item/geonames_city">
+            <sp:has_nuts_level3>
+              <rdf:Description rdf:about="https://ror.org/03dbr7087/addresses_item/geonames_city/nuts_level3">
+                <sp:code>null</sp:code>
+                <sp:name>null</sp:name>
+              </rdf:Description>
+            </sp:has_nuts_level3>
+            <sp:has_nuts_level2>
+              <rdf:Description rdf:about="https://ror.org/03dbr7087/addresses_item/geonames_city/nuts_level2">
+                <sp:code>null</sp:code>
+                <sp:name>null</sp:name>
+              </rdf:Description>
+            </sp:has_nuts_level2>
+            <sp:has_nuts_level1>
+              <rdf:Description rdf:about="https://ror.org/03dbr7087/addresses_item/geonames_city/nuts_level1">
+                <sp:code>null</sp:code>
+                <sp:name>null</sp:name>
+              </rdf:Description>
+            </sp:has_nuts_level1>
+            <sp:has_license>
+              <rdf:Description rdf:about="https://ror.org/03dbr7087/addresses_item/geonames_city/license">
+                <sp:license>http://creativecommons.org/licenses/by/3.0/</sp:license>
+                <sp:attribution>Data from geonames.org under a CC-BY 3.0 license</sp:attribution>
+              </rdf:Description>
+            </sp:has_license>
+            <sp:has_geonames_admin2>
+              <rdf:Description rdf:about="https://ror.org/03dbr7087/addresses_item/geonames_city/geonames_admin2">
+                <sp:code>null</sp:code>
+                <sp:ascii_name>null</sp:ascii_name>
+                <sp:id>null</sp:id>
+                <sp:name>null</sp:name>
+              </rdf:Description>
+            </sp:has_geonames_admin2>
+            <sp:has_geonames_admin1>
+              <rdf:Description rdf:about="https://ror.org/03dbr7087/addresses_item/geonames_city/geonames_admin1">
+                <sp:code>CA.08</sp:code>
+                <sp:ascii_name>Ontario</sp:ascii_name>
+                <sp:id>6093943</sp:id>
+                <sp:name>Ontario</sp:name>
+              </rdf:Description>
+            </sp:has_geonames_admin1>
+            <sp:city>Toronto</sp:city>
+            <sp:id>6167865</sp:id>
+          </rdf:Description>
+        </sp:has_geonames_city>
+        <sp:lat>43.70011</sp:lat>
+        <sp:primary>false</sp:primary>
+        <sp:line>null</sp:line>
+        <sp:state>null</sp:state>
+      </rdf:Description>
+    </sp:has_addresses>
+    <sp:has_labels>
+      <rdf:Description rdf:about="https://ror.org/03dbr7087/labels_item">
+        <sp:iso639>fr</sp:iso639>
+        <sp:label>Université de Toronto</sp:label>
+      </rdf:Description>
+    </sp:has_labels>
+    <sp:id>https://ror.org/03dbr7087</sp:id>
+    <sp:established>1827</sp:established>
+    <sp:status>active</sp:status>
+  </rdf:Description>
+</rdf:RDF>
